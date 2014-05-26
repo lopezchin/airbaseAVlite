@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Avlite - Solar Aviation Lighting</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/colorbox.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <header class="t-header">
+            <?php
+                $home = array("index.php", "");
+                $product = array("product.php", "category.php","");
+                $about = array("aboutus.php", "","");
+                $sales = array("quotation.php", "");
+                $techical = array("quotation.php", "");
+                $file = $_SERVER["SCRIPT_NAME"];
+                $break = explode('/', $file);
+                $pfile = $break[count($break) - 1]; 
+            ?>
+
+            <div class="l-wrap">
+                <div class="branding">
+                    <a href="index.php"><img src="assets/i/logo.jpg" /></a>
+                </div>
+  
+                <nav class="menu menu--secondary">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="index.php" class="">Home</a></li>
+                        <li class="menu__item"><a href="product.php" class="">Products</a></li>
+                        <li class="menu__item"><a href="contact.php" class="">Contact Us</a></li>
+                        <li class="menu__item <?php if (in_array($pfile, $about)) { echo "is-active"; } ?>"><a href="aboutus.php" class="">About Us</a>
+                            <ul class="menu__subpane">
+                                <li><a href="news.php" class="parent">News</a></li>
+                                <li><a href="case-studies.php" class="parent">Case studies</a></li>
+                                <li><a href="testimonials.php" class="parent">Testimonials</a></li>
+                                <li><a href="research.php" class="parent">Research</a></li>
+                                <li><a href="quality-assurance.php" class="parent">Quality Assurance</a></li>
+                                <li><a href="professional-associations.php" class="parent">Professional Associations</a></li>
+                                <li><a href="avlite-community.php" class="parent">Avlite in community</a></li>
+                                <li><a href="news-letter.php" class="parent">News letter</a></li>
+                            </ul>  
+                        </li>
+
+                    </ul>
+                    <div class="search">
+                        <form class="search__form" action="/" method="post">
+                            <input type="search" class="search__input input-full" placeholder="SEARCH">
+                            <button class="search__button" type="submit" value=""></button>
+                        </form>
+                    </div>
+                </nav>
+                 <nav class="menu menu--main">
+    
+                    <ul class="menu__list" id="amenu-list">
+                        <li class="menu__item home <?php if (in_array($pfile, $home)) { echo "is-active"; } ?>"><a href="index.php">Home</a> </li>
+                        <li class="menu__item <?php if (in_array($pfile, $product)) { echo "is-active"; } ?>"> 
+                            <a href="product.php" class="">Products</a>
+                            <ul class="menu__pane">
+                                <li class="menu__child-branch">
+                                    <a class="menu__subitem"  href="#">Solar Airfield Lighting </a>
+                                      <ul class="menu__pane">
+                                        <li>
+                                            <a href="#" class="menu__subitem">AV-425-RF Radio-Controlled Solar Aviation Light</a>                                                                                            
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu__subitem">AV-70 & AV-70-HI Solar Aviation Light</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu__subitem">AV-72-RF Radio-Controlled Solar Aviation Light with Tactical IR Mode & 128bit Encryption</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu__subitem">AV-15 Solar Aviation Light</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu__child-branch">
+                                    <a class="menu__subitem" href="#">Solar Heliport Lighting</a>
+                                </li>
+                                <li class="menu__child-branch">
+                                    <a class="menu__subitem" href="#">Obstruction Lighting</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu__item <?php if (in_array($pfile, $sales)) { echo "is-active"; } ?>">
+                            <a href="quotation.php" class="">Sales & Enquiries </a>
+                            <ul class="menu__pane">
+                                <li class="menu__child-branch">
+                                    <a href="quotation.php" class="menu__subitem">Request a Quotation</a>
+                                </li>
+                                <li class="menu__child-branch">
+                                    <a href="sales_terms.php" class="menu__subitem">Sales Terms</a>
+                                </li>
+                                <li class="menu__child-branch">
+                                    <a href="distrib_app.php" class="menu__subitem">Become a Distributor</a>
+                                </li>
+                                <li class="menu__child-branch">
+                                    <a href="quotation.php" class="menu__subitem">Request a Quotation</a>
+                                </li>
+                                <li class="menu__child-branch">
+                                   <a href="trial_rqst.php" class="menu__subitem">Evaluate a Product</a>
+                                </li>
+                                <li class="menu__child-branch">
+                                    <a href="warranty.php" class="menu__subitem">Warranty Registration</a>
+                                </li>
+                                <li class="menu__child-branch">
+                                    <a href="cat_rqst.php" class="menu__subitem">Order a Catalogue</a>
+                                </li>
+                                <li class="menu__child-branch">
+                                   <a href="gsm_acc.php" class="menu__subitem">Create a GSM Account</a>
+                                </li>
+                                <li class="menu__child-branch">
+                                   <a href="jobs.php" class="menu__subitem">Positions Vacant</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="">Technical </a>
+                            <ul class="menu__pane">
+                                <li class="menu__child-branch">
+                                    <a class="menu__subitem"  href="#">Sale 1 </a>
+                                </li>
+                                <li class="menu__child-branch">
+                                    <a class="menu__subitem" href="#">Sale 2 </a>
+                                </li>
+                                <li class="menu__child-branch">
+                                    <a class="menu__subitem" href="#">Sale 3 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item"><a href="contact.php" class="">Contact </a></li>
+                    </ul>
+                    <div class="login">
+                        <a href="#" class="button button--red login__button button-small" type="submit" value="">Login</a>                    
+                    </div>
+                </nav>
+            </div>
+         </header>
+         
+        <div class="l-wrap">
+
+<section class="slider">
+    <div class="flexslider">
+      <ul class="slides slider-img--cont">
+        <li data-thumb="assets/i/slide1.jpg" title="Solar Airfield Lighting">
+            <img src="assets/i/slide1.jpg" />
+            <div class="flex-caption" >
+                <h1>Solar Airfield Lighting</h1>
+                <p>lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
+                <a href="#" class="button button-medium slider-button">MORE</a>
+            </div>
+        </li>
+        <li data-thumb="assets/i/slide2.jpg" title="Solar Heliport Lighting">
+            <img src="assets/i/slide2.jpg" />
+            <div class="flex-caption" >
+                <h1>Solar Heliport Lighting</h1>
+                <p>lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
+                <a href="#" class="button button-medium slider-button">MORE</a>
+             </div>
+        </li>
+       <li data-thumb="assets/i/slide3.jpg" title="Obstruction lighting">
+            <img src="assets/i/slide3.jpg" />
+            <div class="flex-caption" >
+                <h1>Obstruction lighting</h1>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
+                <a href="#" class="button button-medium slider-button">MORE</a>
+            </div>
+        </li>
+      </ul>
+    </div>
+</section>
+
+<div class="section section--main">
+    <div class="t-content t-content-no-border">
+        <div class="post post--story">
+            <header>
+                <h2 class="section-title">ABOUT AVLITE</h2>
+                <div class="section-title__border"></div>
+            </header>
+
+            <div class="post_body formatted">
+                <p>
+                    Avlite Systems is a subsidiary of Sealite Pty Ltd, an award-winning manufacturer of aids to navigation. With product installations in more than 110 countries and solar lighting solutions installed in the most challenging airfield and marine environments possible, the company has a customer base consisting of over 200 government agencies who rely on us to provide the most advanced and affordable navigation aids available.
+                </p>
+                <h6>World-class solar lighting systems manufacturer</h6>
+                <p>
+                    Avlite Systems is a world-class solar lighting systems manufacturer with a proven reputation for rapid, innovative, and agile technology solutions designed specifically for defense, government, civil and humanitarian aid operations in the most remote, toughest environments.
+                </p>
+                <h6>Fast growing and widely diversified</h6>
+                <p>Fast-growing and widely diversified, Avlite and it’s strategic partners work closely with the US Department of Defense (DOD), various aviation MAJCOMS, Federal Aviation Administration (FAA), International Civil Aviation Organization (ICAO), International Engineering Services Airport Lighting Committee (IESALC) and government civil aviation authorities (CAA’s) to provide solar airfield lighting solutions that meet or exceed industry specifications.</p>
+                
+                <a href="#" class="button button-large button__more">Show More</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="t-sidebar">
+        <div class="widget">   
+            <header>                 
+                <h2 class="section-title">LATEST NEWS</h2>
+                <div class="section-title__border"></div>
+            </header>
+
+            <div class="widget__core">                        
+                <div class="post post--news">
+                    <p class="date">3rd May 2013</p>
+                    <p>Avlite Welcomes New Distributors</p>
+                </div>
+                <div class="post post--news">
+                    <p class="date">24th April 2013</p>
+                    <p>JUST RELEASED: Avlite's Universal Helipad Flood Light</p>
+                </div>
+                <div class="post post--news">
+                    <p class="date">16th April 2013</p>
+                    <p>Avlite's Universal Helipad Flood Lights illuminate hospital's new roof-top helipad</p>
+                </div>
+                <div class="post post--news">
+                    <p class="date">20th March 2013</p>
+                    <p>Avlite launches its new product innovation - Solar, DC and AC Obstruction Lighting</p>
+                </div>
+                <div class="post post--news">
+                    <p class="date">12th February 2013</p>
+                    <p>See us at the Australian International Aerospace & Defence Exposition - Avalon Airshow 2013</p>
+                </div>
+                <a href="#" class="button mt14px">Show all news</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+        
+        <aside class="t-sidebar--secondary">
+            <div class="small-logo">
+                <a href="#"><img src="assets/i/small-logo.jpg" /></a>
+            </div>
+            <div class="widget widget__contact">
+                <p>H/O call : <span>+61(3) 5977 6128 </span></p>
+                <p>USA & Canada call : <span>+1 (603) 737 1310</span></p>
+            </div>
+            <div class="widget widget__subscribe">
+                <form class="subscribe__form" action="/" method="post">
+                    <input type="email" class="subscribe__input input-full" placeholder="YOUR EMAIL ADDRESS" required>
+                    <button class="button  button__subscribe" type="submit" value="">SUBSCRIBE</button>
+                </form>
+            </div>
+        </aside>
+
+        <footer class="t-footer">  
+            <nav class="menu subsidiary-menu">
+                 <ul class="menu__root">
+                    <li class="menu__item"><a href="product.php" class="">Products</a></li>
+                    <li class="menu__item"><a href="images.php" class="">Gallery</a></li>
+                    <li class="menu__item"><a href="contact.php" class="">Contact Us</a></li>
+                    <li class="menu__item"><a href="sitemamp.php" class="">Site map</a></li>
+                </ul>
+            </nav>
+             <p class="copyright">
+                © 2013 All rights reserved.
+            </p>
+        </footer> 
+
+        <div class="hidden avlite-form" id="form-quotation">
+            <?php include 'quotation.php'; ?>
+        </div>   
+     </div>   
+                    
+
+    <!-- jQuery -->
+    <script src="assets/js/ext/jquery-1.8.2.min.js"></script>
+    <script src="assets/js/libs/isotope.js"></script>
+    <script src="assets/js/ext/modernizr.custom.2.6.1.js"></script>
+    <!-- FlexSlider -->
+    <script defer src="assets/js/libs/jquery.flexslider.js"></script>
+    <script src="assets/js/libs/jquery.bxslider.min.js"></script>
+
+    <script src="assets/js/libs/jquery.zoom.js"></script>  
+    <script src="http://www.inabrains.com/tooltip/js/libs/eacd7d071f342c3d2855e17915b4c5223bd87f3b5778cf4bd630459a330ed1aa.js"></script>
+
+    <script src="assets/js/libs/amenu.js"></script>
+
+    <script src="assets/js/libs/jquery.colorbox-min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        // Using a selector:
+        $(".lightbox-form").colorbox({
+            inline: true,
+            width: "80%",
+            maxWidth: "1000px",
+            href:"#form-quotation"
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        $(function($){
+            avlite.Global.init();  
+            avlite.Category.init();  
+            avlite.Front.init();  
+            avlite.Product.init();  
+        });
+    </script>
+
+
+</body>
+
+</html>
+

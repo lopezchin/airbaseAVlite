@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Avlite Product Acccessories Module</name>
+    <author>Philwebservices</author>
+    <creationDate>03-03-2014</creationDate>
+	<copyright>Allright reserved 2014</copyright>
+    <authorEmail>philwebservices.webdev05@gmail.com</authorEmail>
+    <version>1.0.0</version>
+    <description>Avlite Product Acccessories Module</description>
+    <files>
+        <filename>mod_avlite_accessories.xml</filename>
+        <filename module="mod_avlite_accessories">mod_avlite_accessories.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+    </files>
+    <config>
+		<fields name="params">
+			<fieldset>
+				<field
+					name="parent"
+					type="category"
+					extension="com_content"
+					published=""
+					label="Avlite Product Acccessories Module"
+					description="Avlite Product Acccessories Module"/>
+			</fieldset>
+		</fields>
+    </config>
+</extension>

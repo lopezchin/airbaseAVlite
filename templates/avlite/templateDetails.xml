@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>Avlite</name>
+	<creationDate>25 November 2009</creationDate>
+	<author>philweb</author>
+	<authorEmail>philwebservices</authorEmail>
+	<authorUrl>http://www.der-auftritt.de</authorUrl>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>3.1.0</version>
+	<description>TPL_BEEZ3_XML_DESCRIPTION</description>
+
+	<files>
+		<folder>assets</folder>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
+		<filename>include.php</filename>
+	</files>
+
+	<positions>
+		<position>list-nav</position>
+		<position>main-menu</position>
+		<position>slider</position>
+		<position>sidebar</position>		
+		<position>subscribe</position>	
+		<position>breadcrums</position>
+		<position>form-field</position>
+		<position>map-lighbox</position>
+		<position>footer-menu</position>
+		<position>product-listing</position>
+		<position>search-form</position>
+		<position>other-airfield-module</position>
+		<position>avlite-accessories-module</position>
+		<position>avlite-airfield-module</position>
+		<position>avlite-obstruction-module</position>
+		<position>avlite-heliport-module</position>
+	</positions>
+</extension>

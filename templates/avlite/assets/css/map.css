@@ -1,0 +1,229 @@
+
+/** map **/
+
+.map {
+    position: relative;
+    width: 624px;
+    height: auto;
+    /*z-index: 101;*/
+    /*z-index: -1;*/
+}
+
+.mobile-distributors {
+    display:none;
+}
+
+.contenent {
+    position: absolute;
+    z-index: 102;
+}
+.contenent__links {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top:30px;
+}
+
+.active {
+    color: #e61e31;
+}
+.north_america {
+    width: 43%;
+  height: 100%;
+  top: 7px;
+  left: 2px;
+}
+
+.map--link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.backOpq
+{
+    background-color: #fff; opacity:0;
+}
+
+.n-a-2 {    
+    background: url('../i/Avlite_NorthAmerica_Map.gif') 0px 0px no-repeat;
+    background-size: 100%;
+}
+
+.south_america {
+    width: 15.9%;
+  height: 100%;
+  top: 196px;
+  left: 134px;
+}
+
+.s-a-2 {
+    background: url('../i/images/Avlite_SouthAmerica_Map.gif') 0px 0px no-repeat;
+    background-size: 100%;
+}
+
+.europe {
+    width: 21.2%;
+    height: 100%;
+    top: 37px;
+    left: 277px;
+}
+
+.e-u-2 {
+    background: url('../i/images/Avlite_Europe_Map.gif') 0px 0px no-repeat;
+    background-size: 100%;
+}
+
+.africa {
+    width: 19.1%;
+    height: 100%;
+    top: 150px;
+    left: 264px;
+}
+
+.a-f-2{
+    background: url('../i/images/Avlite_Africa_Map.gif') 0px 0px no-repeat;
+    background-size: 100%;
+}
+
+.middle_east {
+    width: 9%;
+    height: 100%;
+    top: 146px;
+    left: 350px;
+}
+
+.m-e-2{
+    background: url('../i/images/Avlite_MiddleEast_Map.gif') 0px 0px no-repeat;
+    background-size: 100%;
+}
+
+.asia {
+    width: 36.8%;
+    height: 100%;
+    top: 20px;
+    right: 2px;
+}
+
+.a-s-2{
+    background: url('../i/images/Avlite_AsiaPacific_Map.gif') 0px 0px no-repeat;
+    background-size: 100%;
+}
+
+.australia {
+    width: 112px;
+    height: 113px;
+    top: 240px;
+    right: 23px;
+}
+
+.a-2{
+    background: url('../i/images/Avlite_Australia_Map.gif') 0px 0px no-repeat;
+    background-size: 100%;
+}
+
+.menu__root {
+    display: inline-block;
+}
+.menu__root li {
+    display: inline-block;
+    margin: 0 3px 0; 
+}
+.menu__root li a {
+    display: inline;
+    padding-right: 10px;
+}
+.menu__root li:after {
+    content:'|';
+    font-size: 11px;
+}
+.menu__root li:last-child:after {
+    content: '';
+    margin: 0;
+}
+
+@media screen and (max-width: 690px) {
+  
+    .map {
+        display: none;
+    }
+
+    .contenent__links {
+        display: none;
+    }
+    
+    .mobile-distributors {
+        display:block;
+     }
+     
+     .mobile-distributors td {
+         padding: 10px;
+     } 
+     
+     .mobile-distributors td:nth-of-type(2):before {
+        content: "";
+      }
+
+     .mobile-distributors td:nth-of-type(3):before {
+        content: "";
+      }
+
+      .mobile-distributors td:nth-of-type(4):before {
+        content: "";
+      }
+
+      .mobile-distributors td:nth-of-type(5):before {
+        content: "";
+      }
+}
+@media screen and (max-width: 1100px) {
+    
+        #pg_About .t-sidebar {
+                float: right;
+                width: 275px;
+                margin-left: -275px;
+    }
+        
+        #pg_BecomeDist .nav-slider-products {
+                display: none;
+    }
+}
+@media screen and (max-width: 1100px) {
+    
+        #pg_Quality .t-sidebar {
+                float: right;
+                width: 275px;
+                margin-left: -275px;
+                margin-top:0px;
+    }
+        
+}
+
+@media screen and (max-width: 960px) {
+        #pg_Quality .t-sidebar {
+                float: left;
+    width: 100%;
+    margin-left: 0;
+                margin-top:10px;
+    }
+        
+}
+
+
+@media screen and (max-width: 1100px) {
+    
+        .t-sidebar {
+                float: left;
+    width: 100%;
+    margin-left: 0;
+                margin-top:10px;
+    }
+        
+        #other_products { display: none; }
+        
+        .t-content-no-border
+        {
+            padding: 0px;
+        }
+        
+}

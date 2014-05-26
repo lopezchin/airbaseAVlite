@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>Custom Avlite News Article</name>
+	<author>Avlite</author>
+	<creationDate>10-04-2013</creationDate>
+	<copyright>Allright reserved 2013</copyright>
+	<license>GPL 2.0</license>
+	<authorEmail>philwebservices.joomladev21@gmail.com</authorEmail>
+	<authorURL>www.avlite.com</authorURL>
+	<version>1.0.0</version>
+	<description>Avlite News</description>
+	
+	<!--define which files and folders will be part of this module-->
+	<files>
+		<filename module="mod_avlite_news">mod_avlite_news.php</filename>
+		<filename>mod_avlite_news.xml</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+	</files>
+	<!--enclosed in <config></config> tags and sets the content with fields-->
+	<config>
+		<fields name="params">
+			<fieldset>
+				<field
+					name="parent"
+					type="category"
+					extension="com_content"
+					published=""
+					label="Custom Avlite News Article"
+					description="Custom Avlite News Article"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

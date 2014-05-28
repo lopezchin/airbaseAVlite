@@ -2033,7 +2033,7 @@ html[xmlns] .slides {
 .menu--main .menu__item,
 .menu--main ul > li {
   display: block;
-  position: relative !important;
+  /*position: relative !important;*/
   float: left;
   vertical-align: bottom;
 }
@@ -3903,8 +3903,12 @@ BostonBlue {
   display: none;
 }
 
-
 .menu--main .menu__list .item-108 a.parent:after, .menu--main .menu__list .item-108 ul.nav-child {
+  display: none!important;
+}
+
+
+.menu--main .menu__list .item-192 {
   display: none!important;
 }
 
@@ -3935,3 +3939,130 @@ background-color: #fff !important;
   border: 0;
   background-color: #fff !important;
 }
+
+
+/* CSS for the new menu */
+
+.menu-nav{}
+
+.menu-nav:hover{
+  background: #fff;
+  color: #000!important;
+}
+
+.menu__list li ul.nav-child {
+  display: none!important;
+}
+
+.menu__list li:hover ul.nav-child{
+  display: block!important;
+  min-width:200px;
+  min-height: 200px;
+  border-bottom: 2px solid #c42d4a;
+  background: #fff!important; 
+}
+
+.menu__list li:hover ul.nav-child li a{
+  background: #fff;
+   color: #000!important;
+}
+
+.menu__list li:hover ul.nav-child li a:hover{
+  color: #c42d4a!important;
+  border-right: 2px solid #c42d4a;
+}
+
+.menu__list li:hover ul.nav-child > li ul.nav-child{
+  display: none!important;
+  position:absolute;
+  left: 100%;
+  top: 0;
+}
+
+.menu__list li:hover ul.nav-child > li:hover ul.nav-child{
+  display: block!important;
+  position:absolute!important;
+  left: 100%;
+  top: 0;
+}
+
+.menu__list li:hover ul.nav-child li{
+  /*position:relative!important;*/
+}
+
+/*
+.menu__item:hover ul.menu__pane li.menu__child-branch:hover ul.menu__pane{
+  display: block!important;
+  position:absolute;
+  left: 100%;
+  top: 0;
+}
+
+.menu__item:hover ul.menu__pane li.menu__child-branch ul.menu__pane li ul.menu__pane{
+  display: none!important;
+  position:absolute;
+  left: 100%;
+  top: 0;
+}
+
+.menu__item:hover ul.menu__pane li.menu__child-branch ul.menu__pane li:hover ul.menu__pane{
+  display: block!important;
+  position:absolute;
+  left: 100%;
+  top: 0;
+}
+
+
+.menu__item:hover ul.menu__pane li.menu__child-branch ul.menu__pane li ul.menu__pane li ul.menu__pane{
+  display: none!important;
+  position:absolute;
+  left: 100%;
+  top: 0;
+}
+
+.menu__item:hover ul.menu__pane li.menu__child-branch ul.menu__pane li ul.menu__pane li:hover ul.menu__pane{
+  display: block!important;
+  position:absolute;
+  left: 100%;
+  top: 0;
+}
+
+.menu__item:hover ul.menu__pane li.menu__child-branch:hover > a, .menu__item:hover ul.menu__pane li.menu__child-branch:hover ul.menu__pane li:hover> a{
+  background: #f5f5f5;
+}
+.menu__item:hover ul.menu__pane li.menu__child-branch:hover > a:before, .menu__item:hover ul.menu__pane li.menu__child-branch:hover ul.menu__pane li:hover> a:before{
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: #c42d4a;
+  color: #000!important;
+}
+
+.image_dis{
+  position: absolute!important;
+  min-width: 250px!important;
+  left: 100%;
+  top: 0;
+}
+
+.image_dis li{
+  padding: 30px 30px 0;
+}
+
+.menu--main .menu__item.active .menu__pane li.haschild:first-child ul, .menu--main .menu__item.active .menu__pane li.haschild:nth-child(2) ul{
+  display:block;
+  position:absolute;
+  left: 100%;
+  top: 0;
+}
+
+.menu--main .menu__item.active .menu__pane li.haschild.active ul{
+  display:block!important;
+  position:absolute;
+  left: 100%;
+  top: 0;
+}
+*/

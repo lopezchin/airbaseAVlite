@@ -24,10 +24,10 @@ var avlite = {
             }
         },
         menuFlyout: function() {
-            $('.menu__list, .dropdown__list').amenu({
-                'speed': 'fast',
-                'animation': 'slide'
-            });
+            // $('.menu__list, .dropdown__list').amenu({
+            //     'speed': 'fast',
+            //     'animation': 'slide'
+            // });
         }
         
     },

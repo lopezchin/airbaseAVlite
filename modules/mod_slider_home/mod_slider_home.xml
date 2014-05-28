@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<extension type='module' version='3.5' method='upgrade'>
+	<name>Slide Homepage</name>
+	<author>Philweb</author>
+	<version>1.0.0</version>
+	<description>This is for the advertisement</description>
+	<files>
+		<filename>mod_slider_home.xml</filename>
+		<filename module='mod_slider_home'>mod_slider_home.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic"
+				addfieldpath="/administrator/components/com_banners/models/fields">
+				<field
+					name="catid"
+					type="category"
+					extension="com_banners"
+					label="Banner Category"
+					multiple="true" size="5"
+					default=""
+					description="Banenr Category ID" >
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

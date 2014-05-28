@@ -52,8 +52,8 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 <script src="<?php echo $this->baseurl ?>/templates/avlite/assets/js/libs/jquery.tabify.js"></script>  
 <script src="<?php echo $this->baseurl ?>/templates/avlite/assets/js/libs/tooltip.js"></script>  
-<script src="<?php echo $this->baseurl ?>/templates/avlite/assets/js/libs/marquee.js"></script>
-<script src="<?php echo $this->baseurl ?>/templates/avlite/assets/js/libs/amenu.js"></script>
+<!--<script src="<?php echo $this->baseurl ?>/templates/avlite/assets/js/libs/marquee.js"></script>
+<script src="<?php echo $this->baseurl ?>/templates/avlite/assets/js/libs/amenu.js"></script>-->
 <script src="<?php echo $this->baseurl ?>/templates/avlite/assets/js/libs/jquery.elevatezoom.js"></script>
 
 <script src="<?php echo $this->baseurl ?>/templates/avlite/assets/js/libs/jquery.selectbox-0.1.3.min.js"></script>
@@ -218,30 +218,11 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
             <div class="t-sidebar">
                 <div class="widget">  
-                
-                    <?php                      
-                      $app = JFactory::getApplication();
-                      $menuID = $app->getMenu()->getActive()->id ;
-                      if ($menuID == '101'){ ?>
-                        <header>                 
-                            <h2 class="section-title">AVLITE NEWS</h2>
-                            <div class="section-title__border"></div>
-                        </header>
+                    
 
-                        <div class="widget__core widget__news-slide" id ="marqueecontainer" >
-
-                            <div id="vmarquee" onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed">    
-                               <!--sidebar-->     
-                                    <jdoc:include type="modules" name="sidebar" />   
-                                <!--sidebar end -->                
-                            </div>              
-                        </div> 
-
-                      <?php }else{ ?>
-                            <!--sidebar-->     
-                                <jdoc:include type="modules" name="sidebar" />   
-                            <!--sidebar end -->  
-                      <?php } ?>
+                        <!--sidebar-->     
+                        <jdoc:include type="modules" name="sidebar" />   
+                        <!--sidebar end --> 
                    
                 </div>
             </div>

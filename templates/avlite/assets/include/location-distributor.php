@@ -4,8 +4,6 @@
 });</script>
 
 <div class="section section--main">
-    
-    <jdoc:include type="modules" name="breadcrums" />
 
     <section class="t-content t-content-no-border">
         

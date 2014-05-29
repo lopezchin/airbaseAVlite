@@ -1,0 +1,34 @@
+<?xml version='1.0'?>
+<extension type='module' version='3.0' method='upgrade'>
+	<name>Product Listing</name>
+	<author>Mark Diaz Philwebservices</author>
+	<version>1.0.0</version>
+	<description>This is for the product listing</description>
+	<files>
+		<filename>mod_product_listing.xml</filename>
+		<filename module='mod_product_listing'>mod_product_listing.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="catid"
+					type="category"
+					extension="com_content"
+					multiple="true"
+					default=""
+					size="10"
+					label="JCATEGORY"
+					description="MOD_ARTICLES_NEWS_FIELD_CATEGORY_DESC" >
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

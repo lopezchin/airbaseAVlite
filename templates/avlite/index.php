@@ -67,10 +67,13 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         avlite.Global.init();  
         avlite.Category.init();  
         avlite.Front.init();  
+        avlite.Front.Menu();  
         avlite.Product.init();
         avlite.Zoom.init();
-        avlite.Lightbox.init();  
+        avlite.Lightbox.init(); 
     });
+
+
 </script>
 
 </head>
@@ -114,6 +117,8 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 <div class="l-wrap">
 
 <!--accessories-->
+        
+        <jdoc:include type="modules" name="breadcrums" />
 
         <!--jdocs for slider-->   
             <jdoc:include type="modules" name="slider" />
@@ -122,8 +127,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         <?php $app = JFactory::getApplication();
               $menuID = $app->getMenu()->getActive()->id ;
                   if ($menuID == '138'){ ?>
-
-        <jdoc:include type="modules" name="breadcrums" />
         
         <div id="proj_gallery" class="section section--main">
             <div id="gallery-img" class="iso-container-products imageRow">
@@ -146,9 +149,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         <?php }elseif($menuID == '144'){ ?>
             
          <div class="section section--main">
-            <!--jdocs for breadcrum-->   
-                <jdoc:include type="modules" name="breadcrums" />
-            <!-- jdocs breadcrum end-->
             <?php #include('assets/include/video-gallery.php') ?>  
             <section class="t-content">
                 <jdoc:include type="component" />
@@ -157,18 +157,17 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         </div>  
 
 
-        <?php }elseif($menuID == '186' || $menuID == '188' || $menuID == '189' || $menuID == '190'){ 
+        <?php 
+
+        // }elseif($menuID == '186' || $menuID == '188' || $menuID == '189' || $menuID == '190'){ 
             
-             include('assets/include/products.php');
+        //      include('assets/include/products.php');
 
         }else { ?>
 
 
         <div class="section section--main">
             
-            <!--jdocs for breadcrum-->   
-                <jdoc:include type="modules" name="breadcrums" />
-            <!-- jdocs breadcrum end-->
 
             <div class="t-content t-content-no-border">
                     
@@ -219,10 +218,9 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
             <div class="t-sidebar">
                 <div class="widget">  
                     
-
-                        <!--sidebar-->     
-                        <jdoc:include type="modules" name="sidebar" />   
-                        <!--sidebar end --> 
+                    <!--sidebar-->     
+                    <jdoc:include type="modules" name="sidebar" />   
+                    <!--sidebar end --> 
                    
                 </div>
             </div>

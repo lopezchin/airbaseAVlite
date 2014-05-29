@@ -29,7 +29,6 @@ var avlite = {
             //     'animation': 'slide'
             // });
         }
-        
     },
     Front: {
         init: function () {
@@ -44,6 +43,60 @@ var avlite = {
                   start: function (slider) {
                       $('body').removeClass('loading');
                   }
+            });
+        },
+        Menu: function() {
+
+            // $( ".nav-child li" ).hover(
+            //   function() {
+            //     $(this).toggleClass('sample');
+            //   }
+            // );
+            $selector = $( "#amenu-list li ul li");
+
+            $( "#amenu-list > li").hover(function(){
+                var max1 = 0;
+
+                $( "#amenu-list > li").removeClass('active');
+                $(this).addClass('active');
+
+
+                $('#amenu-list li.active').find('ul.nav-child').each(function(){
+
+                $('#amenu-list li .nav-child').css('height','auto');
+
+                   var h = $(this).outerHeight();
+                   if(h > max1){
+                        max1 = h;
+                   }
+                   
+                });
+
+                $('#amenu-list li.active .nav-child').css('height',max1);
+
+
+
+            });
+
+            $selector.hover(function() {
+                var max = 0;
+
+                $('#amenu-list li.active').find('ul.nav-child').each(function(){
+
+                $('#amenu-list li .nav-child').css('height','auto');
+
+                   var h = $(this).outerHeight();
+                   if(h > max){
+                        max = h;
+                   }
+                   
+                });
+
+                $('#amenu-list li.active .nav-child').css('height',max);
+
+                $selector.removeClass('active');
+                $(this).addClass('active');     
+
             });
         }
     },

@@ -3957,7 +3957,7 @@ background-color: #fff !important;
 .menu__list li:hover ul.nav-child{
   display: block!important;
   min-width:200px;
-  min-height: 200px;
+  /*min-height: 200px;*/
   border-bottom: 2px solid #c42d4a;
   background: #fff!important; 
 }

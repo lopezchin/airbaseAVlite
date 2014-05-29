@@ -1,7 +1,7 @@
 <?php // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' ); 
 $doc=JFactory::getDocument();
-$doc->addStyleSheet(JURI::root().'/modules/mod_adv_slider/css/mod_adv_slider.css');
+// $doc->addStyleSheet(JURI::root().'/modules/mod_adv_slider/css/mod_adv_slider.css');
 // $doc->addScript(JURI::root().'/modules/mod_adv_slider/js/jquery-1.4.4.min.js');
 
 require_once JPATH_ROOT . '/components/com_banners/helpers/banner.php';

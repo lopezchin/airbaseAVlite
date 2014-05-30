@@ -24,7 +24,7 @@ foreach ( $cat_news as $cat_result );
 				<div class='latest-news--content'>
 					<!-- edit DATE_FORMAT_LC2_DATE at language/overrides/en-GB.override.ini -->
 					<p class='lnews-date'><?php echo JText::sprintf(JHTML::_('date',$art_result->created, JText::_('DATE_FORMAT_LC2_DATE'))); ?></p>
-					<h4><a href="news/<?php echo $cat_result->path; ?>-list/<?php echo $art_result->id; ?>-<?php echo $art_result->alias;?>"><?php  echo $art_result->title; ?></a></h4>
+					<h4><a href="news/<?php echo $art_result->id; ?>-<?php echo $art_result->alias;?>"><?php  echo $art_result->title; ?></a></h4>
 
 
 					<!-- use code below if you have login in for permissions -->

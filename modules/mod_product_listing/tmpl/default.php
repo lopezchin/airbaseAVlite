@@ -5,16 +5,15 @@ $doc->addStyleSheet(JURI::root().'/modules/mod_product_listing/css/mod_product_l
 // $doc->addScript(JURI::root().'modules/mod_product_listing/js/product_listing.js');
 // JHtml::script(Juri::base() . '/modules/mod_product_listing/js/product_listing.js');
 
-
 ?>
 
 <script type="text/javaScript" src="modules/mod_product_listing/js/product_listing.js"></script>
 
 <div class="section section--main">
 
-    <!--jdocs for breadcrum-->   
+    <!-- jdocs for breadcrum -->   
         <!-- <jdoc:include type="modules" name="breadcrums" /> -->
-    <!-- jdocs breadcrum end-->
+    <!-- jdocs breadcrum end -->
 
     <section class="t-content">
 
@@ -58,7 +57,6 @@ $doc->addStyleSheet(JURI::root().'/modules/mod_product_listing/css/mod_product_l
         
         <div id="Heliport" class="section sectionn--av">
             <section class="iso-container-products imageRow n-border">
-                    section heliport
                     <?php 
 
                     $catID = 37;

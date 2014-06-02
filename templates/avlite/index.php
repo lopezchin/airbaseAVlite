@@ -72,8 +72,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         avlite.Zoom.init();
         avlite.Lightbox.init(); 
     });
-
-
 </script>
 
 </head>
@@ -102,21 +100,19 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                  <nav class="menu menu--main">
                     <!--jdocs for main-menu-->  
                       <jdoc:include type="modules" name="main-menu" />
-                     <!--jdocs for main-menu--> 
-
+                    <!--jdocs for main-menu--> 
+                    
                     <div class="login enquirehdr">
                         <a href="#" class="button button--red login__button button-small lightbox-form-login" type="submit" value=""><i class="icon-email"></i>Enquire</a>                    
                     </div>
                 </nav>
             </div>
          </header>
-  
+
   <!-- header end -->
 
   <!-- content -->       
 <div class="l-wrap">
-
-<!--accessories-->
         
         <jdoc:include type="modules" name="breadcrums" />
 
@@ -149,7 +145,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         <?php }elseif($menuID == '144'){ ?>
             
          <div class="section section--main">
-            <?php #include('assets/include/video-gallery.php') ?>  
             <section class="t-content">
                 <jdoc:include type="component" />
                 <jdoc:include type="message" />
@@ -157,34 +152,15 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         </div>  
 
 
-        <?php 
-
-        // }elseif($menuID == '186' || $menuID == '188' || $menuID == '189' || $menuID == '190'){ 
-            
-        //      include('assets/include/products.php');
-
-        }else { ?>
+        <?php }else { ?>
 
 
         <div class="section section--main">
             
 
             <div class="t-content t-content-no-border">
-                    
-                    <?php 
-                      $app = JFactory::getApplication();
-                      $menuID = $app->getMenu()->getActive()->id ;
-                      if ($menuID == '101'){ ?> <!-- Home Page -->
-                      
-                        <div class="post post--story">
-                            <header>
-                                <h2 class="section-title">ABOUT AVLITE</h2>
-                                <div class="section-title__border"></div>
-                            </header>
-                                <jdoc:include type="component" />
-                                <jdoc:include type="message" />
-                        </div>
-                    <?php }elseif ($menuID == '141'){ ?> <!-- for subscribe form only -->
+
+                     <?php if ($menuID == '141'){ ?> <!-- for subscribe page form only -->
 
                             <jdoc:include type="component" />
                             <jdoc:include type="message" />
@@ -200,27 +176,28 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                             ?>   
 
                     <?php }else{ ?>
-                    
-                        <?php  //include('assets/include/single-product.php'); ?>
 
-                            <jdoc:include type="component" />
-                            <div class="post post--story">
-                                <div class="post_body formatted">
-                                    <jdoc:include type="message" />
-                                </div>
-                            </div>
-                            <jdoc:include type="modules" name="form-field" style="none"/> 
-                            <jdoc:include type="modules" name="product-listing" />
-                    <?php } ?>
+                    <jdoc:include type="component" />
+                    <jdoc:include type="message" />
+
+                    <?php if ($this->countModules('form-field')) : ?>
+                        <jdoc:include type="modules" name="form-field" style="none"/> 
+                    <?php endif; ?>
+
+                    <?php if ($this->countModules('product-listing')) : ?>
+                        <jdoc:include type="modules" name="product-listing" />
+                    <?php endif; ?>
+
+                    <?php } ?>                   
 
             </div>
 
             <div class="t-sidebar">
                 <div class="widget">  
                     
-                    <!--sidebar-->     
+                    <!-- sidebar -->     
                     <jdoc:include type="modules" name="sidebar" />   
-                    <!--sidebar end --> 
+                    <!-- sidebar end --> 
                    
                 </div>
             </div>
@@ -258,20 +235,12 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                     <input type="email" name="email" id="Email" class="subscribe__input input-full" placeholder="YOUR EMAIL ADDRESS" required>
                     <button class="button  button__subscribe" type="submit" value="">SUBSCRIBE</button>
                 </form>
-                <!-- subscribe -->
-                    <!-- <jdoc:include type="modules" name="subscribe" /> -->
-                <!-- subscribe -->
               
             </div>
         </aside>
 
         <footer class="t-footer">  
             <nav class="menu subsidiary-menu">
-                <!-- <ul class="menu__root">
-                    <li class="menu__item"><a href="#" class="">Products</a></li>
-                    <li class="menu__item"><a href="#" class="">Video Gallery</a></li>
-                    <li class="menu__item"><a href="#" class="">Contact Us</a></li>
-                </ul> -->
                 <jdoc:include type="modules" name="footer-menu" />
             </nav>
              <p class="copyright">

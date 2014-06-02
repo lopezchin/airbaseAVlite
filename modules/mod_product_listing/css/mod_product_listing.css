@@ -206,7 +206,7 @@ div.item-line{
     position:absolute;
     /*background:transparent;*/
     cursor:pointer;
-    z-index:999;
+    z-index:9;
 }
 
 .backOpqM{
@@ -258,7 +258,7 @@ div.item-line{
     position: absolute;
     top: 35%;
     width: 57%;
-    z-index: 99999 !important;
+    z-index: 9!important;
 }
   .red-line-7{
      height: 6%;

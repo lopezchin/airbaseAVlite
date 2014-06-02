@@ -15,8 +15,8 @@ $(function(){
         $("#image-category .hover-item-con").hover(
                 function(){
                         $(this).find('.hover-title').fadeIn("fast")
-                                .addClass('show').css({"z-index":999})
-                                .parent().css({"z-index":999}); 
+                                .addClass('show').css({"z-index":9})
+                                .parent().css({"z-index":9}); 
 
                 }, function(){
                         $(this).find('.hover-title').stop().fadeOut("fast")

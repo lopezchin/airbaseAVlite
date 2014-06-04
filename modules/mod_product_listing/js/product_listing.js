@@ -29,27 +29,30 @@ $(function(){
         function(){
 
             $("#animation-top-image").fadeIn("fast").css({"z-index":5});    
-        }, function(){
+        }, 
+
+        function(){
             $("#animation-top-image").stop().fadeOut("fast").css({"z-index":0});    
         }
-        );
+    );
        
 
     $(".blue-line").hover(
-    function(){
+        function(){
             $("#animation-bottom-image").fadeIn("fast").css({"z-index":5}); 
-        }, function(){
+        }, 
+        function(){
             $("#animation-bottom-image").stop().fadeOut("fast").css({"z-index":0}); 
         }
-        );
+    );
 
     $(".hover-item-con").hover(
-                function(){
-                    $($(this).attr('individual-effects')).fadeIn("fast").css({"z-index":5});    
-                }, function(){
-                    $($(this).attr('individual-effects')).stop().fadeOut("fast").css({"z-index":0});    
-                }
-            );
+        function(){
+            $($(this).attr('individual-effects')).fadeIn("fast").css({"z-index":5});    
+        }, function(){
+            $($(this).attr('individual-effects')).stop().fadeOut("fast").css({"z-index":0});    
+        }
+    );
 
     function showItem(a_items){
         $(".iso-container-products .single").animate({ opacity: 0.4 });
@@ -58,19 +61,18 @@ $(function(){
             //$(a_items[i]).show();
             $(a_items[i]).animate({ opacity: 100 });
         };
-                
-                showObstHeli();
+            showObstHeli();
     }
         
-        function showObstHeli()
-        {
-            var obhl_items =  [".obstr",".heli"];
+    function showObstHeli()
+    {
+        var obhl_items =  [".obstr",".heli"];
 
-            for (var i = 0; i < obhl_items.length; i++) {
-            //$(a_items[i]).show();
-            $(obhl_items[i]).animate({ opacity: 100 });
+        for (var i = 0; i < obhl_items.length; i++) {
+        //$(a_items[i]).show();
+        $(obhl_items[i]).animate({ opacity: 100 });
         };
-        }
+    }
 
     $(".red-line").click(function(e){
         var items =  [".AV-425-RF",".AV-70_AV-70-HI",".AV-72-RF"];
@@ -93,6 +95,7 @@ $(function(){
                 scrollToAnchor("AV-SOLAR-PALS");
         e.preventDefault();
     });
+
     /*$(".item-papi").click(function(e){
         var items = [".product-papi"];
 
@@ -143,27 +146,25 @@ $(function(){
     });
 
     $(".item-heliport-lighting").click(function(e){
-                //window.location.href="category.php?#Heliport";
+                
         var items = [".single"];
         showItem(items);
     });
         
         $(".item-air-lights").click(function(e){
         var items = [".single"];
-        showItem(items);
+        showItem(items);     
                 
-                //window.location.href="category.php?#Airfield";
     });
         
         $(".item-obstr-lights").click(function(e){
         var items = [".single"];
         showItem(items);
                 
-                //window.location.href="category.php?#Obstruction";
     });
         
         $(".item-heli-lights").click(function(e){
-                //window.location.href="category.php?#Heliport";
+                
         var items = [".single"];
         showItem(items);
     });

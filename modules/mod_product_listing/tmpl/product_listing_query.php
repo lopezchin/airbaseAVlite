@@ -28,11 +28,19 @@ foreach ( $results as $result  ) { ?>
              <a href="product/<?php echo $result->id; ?>-<?php echo $result->alias;?>" class="menu__subitem"><?php echo $result->title; ?></a>
             </div>
 
-                <a href="<?php echo $prod.'/'.$result->alias; ?>" class="menu__subitem">
-                <center><table id="wrapper">
-                    <tbody><tr><td>
-                    <img src="<?php echo json_decode($result->images)->image_intro; ?>" alt=""/></td></tr></tbody>
-                </table></center></a>
+                <a href="product/<?php echo $result->id; ?>-<?php echo $result->alias;?>" class="menu__subitem">
+                <center>
+                    <table id="wrapper">
+                        <tbody>
+                            <tr>
+                                <td>
+                                <img src="<?php echo json_decode($result->images)->image_intro; ?>" alt=""/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </center>
+                </a>
             </div> 
 
         <?php }else{ ?>

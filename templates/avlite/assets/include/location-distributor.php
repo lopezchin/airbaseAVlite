@@ -48,31 +48,7 @@
     </section>
     <div class="t-sidebar">
         <div class="widget">  
-        
-            <?php
-              //This is the code for the page with menu ID 6
-              $app = JFactory::getApplication();
-              $menuID = $app->getMenu()->getActive()->id ;
-              if ($menuID == '101'){ ?>
-                <header>                 
-                    <h2 class="section-title">AVLITE NEWS</h2>
-                    <div class="section-title__border"></div>
-                </header>
-
-                <div class="widget__core widget__news-slide" id ="marqueecontainer" >
-                    <div id="vmarquee" onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed">    
-                       <!--sidebar-->     
-                            <jdoc:include type="modules" name="sidebar" />   
-                        <!--sidebar end -->                
-                    </div>              
-                </div> 
-
-              <?php }else{ ?>
-                    <!--sidebar-->     
-                        <jdoc:include type="modules" name="sidebar" />   
-                    <!--sidebar end -->  
-              <?php } ?>
-           
+            <jdoc:include type="modules" name="sidebar" />
         </div>
     </div>
 </div>

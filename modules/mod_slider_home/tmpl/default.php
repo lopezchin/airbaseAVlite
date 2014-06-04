@@ -50,7 +50,7 @@ $ctr = 0;
 
                     $state = $desc->state;
 
-                    //counter looping  limit using ><=
+                    // counter looping  limit using > < =
 
                     if($ctr <= 3){
 
@@ -73,46 +73,4 @@ $ctr = 0;
         </ul>
     </div>
 </div>
-
-
-<!-- 
-
-<div id="contents">
-
-    <div id="v2">
-
-        <div id="demo-wrapper">
-
-            <div id="demo-left">
-
-                <div id="vWrapper">
-
-                    <div id="carouselv">
-
-                        <?php foreach($imagelist as $item): ?>
-
-                                <?php $imageurl = $item->params->get('imageurl');?>
-                               
-
-                                <div>
-                                    <img
-                                    src="<?php echo $baseurl . $imageurl;?>"
-                                    alt="<?php echo $alt;?>"
-                                    /><br />
-
-                                    <span class="thumbnail-text"><?php echo htmlspecialchars($item->name, ENT_QUOTES, 'UTF-8');?>  </span>
-                                </div>
-
-                        <?php endforeach; ?>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-</div> -->
 

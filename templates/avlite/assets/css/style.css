@@ -3435,9 +3435,15 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
 }
 
 .current {
-  color: #255a8c;
-  background: none;
+  color: #fff;
+  background: #c72e4b;
 }
+
+/*
+.active{
+  color: #fff;
+  background: #c72e4b;
+}*/
 
 .next {
   background: transparent !important;

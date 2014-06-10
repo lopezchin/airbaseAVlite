@@ -1,6 +1,6 @@
 <div id="image-category">   
 
-            <div class="red-line red-line-0 item-line backOpqM"> &nbsp;</div>
+    <div class="red-line red-line-0 item-line backOpqM"> &nbsp;</div>
     <div class="red-line red-line-1 item-line backOpqM"> &nbsp; </div>
     <div class="red-line red-line-2  item-line backOpqM"> &nbsp; </div>
     <div class="red-line red-line-3 item-line backOpqM"> &nbsp; </div>
@@ -11,7 +11,7 @@
     <div class="red-line red-line-8 item-line backOpqM"> &nbsp; </div>
     <div class="red-line red-line-9 item-line backOpqM"> &nbsp; </div>
 
-            <div class="blue-line blue-line-0 item-line backOpqM"> </div>
+    <div class="blue-line blue-line-0 item-line backOpqM"> </div>
     <div class="blue-line blue-line-1 item-line backOpqM"> </div>
     <div class="blue-line blue-line-2 item-line backOpqM"> </div>
     <div class="blue-line blue-line-3 item-line backOpqM"> </div>
@@ -25,56 +25,50 @@
 
     <div class="back-overlay" style="z-index: 0; opacity: 1;overflow:hidden; ">
          <div class="individual-items">
-                 <a href="#" id="hover3" class="hover-item-con item-av-solar-pals">
+
+            <a href="#39" id="hover3" data-id="39" class="hover-item-con item-39">
                 <span class="arrow bottom_top"><img src="templates/avlite/assets/i/avlogosmall.gif"/></span>
                 <div class="hover-title show hide" style="display: none; z-index: 0;">AV-SOLAR-PALS</div>
             </a>
-            <a href="#" id="hover4" style="display: none;" class="hover-item-con  to-left item-arealight">
-                <span class="arrow"><img src="templates/avlite/assets/i/avlogosmall.gif"/></span>
-                <div class="hover-title show hide" style="display: none; z-index: 0;">AV-SOLAR-PALS</div>
-            </a>
-            <a individual-effects="#runaway-diagram-windsock" href="#" id="hover5" class="hover-item-con  item-windsock-cones">
+
+            <a individual-effects="#runaway-diagram-windsock" href="#38" data-id="38" id="hover5" class="hover-item-con  item-38">
                 <span class="arrow"><img src="templates/avlite/assets/i/avlogosmall.gif"/></span>
                 <div class="hover-title show hide" style="display: none; opacity: 1; z-index: 0;">Windsock and Cones</div>
             </a>
-            <!--<a individual-effects="#runaway-diagram-PAPI" href="#" id="hover6" class="hover-item-con item-papi">
-                <span class="arrow"><img src="images/avlogosmall.gif"/></span>
-                <div class="hover-title show hide" style="display: none; z-index: 0;">PAPI</div>
-            </a>-->
-                <a individual-effects="#runaway-diagram-tower" href="#" id="hover8" class="hover-item-con  item-palc">
+            <a individual-effects="#runaway-diagram-tower" href="#41" data-id="41" id="hover8" class="hover-item-con  item-41">
                 <span class="arrow"><img src="templates/avlite/assets/i/avlogosmall.gif"/></span>
                 <div class="hover-title show hide" style="display: none; z-index: 0; opacity: 1;">PALC</div>
             </a>
-            <a individual-effects="#runaway-diagram-cone" href="#" id="hover9" class="hover-item-con to-right  item-cones">
+            <a individual-effects="#runaway-diagram-cone" href="#43" id="hover9" data-id="43" class="hover-item-con to-right  item-43">
                 <span class="arrow"><img src="templates/avlite/assets/i/avlogosmall.gif"/></span>
                 <div class="hover-title show hide" style="display: none; opacity: 1; z-index: 0;">Cones</div>
             </a>
-            <a individual-effects="#runaway-diagram-av15-av60" class="hover-item-con to-right item-av15-av60" id="hover10" href="#">
+            <a individual-effects="#runaway-diagram-av15-av60" href="#35" data-id="35" class="hover-item-con to-right item-35" id="hover10" href="#">
                 <span class="arrow bottom_top"><img src="templates/avlite/assets/i/avlogosmall.gif"/></span>
                 <div style="display: none; z-index: 0;opacity:1;" class="hover-title show hide">Barricade/Hazard Lighting</div>
             </a>
-            <a  individual-effects="#runaway-diagram-helipad" href="#Heliport-tab" id="hover11" class="hover-item-con item-heliport-lighting">
+            <a  individual-effects="#runaway-diagram-helipad" href="#Heliport-tab" data-id="58"  id="hover11" class="hover-item-con item-heliport-lighting">
                 <span class="arrow bottom_top"><img src="templates/avlite/assets/i/avlogosmall.gif"/></span>
                 <div class="hover-title show hide" style="display: none; z-index: 0; opacity: 1;">Heliport Lighting</div>
             </a>
             
-            <a individual-effects="#runaway-diagram-gable" href="#" id="hover13" class="hover-item-con  to-right item-gable">
+            <a individual-effects="#runaway-diagram-gable" href="#42" data-id="42" id="hover13" class="hover-item-con  to-right item-42">
                 <span class="arrow"><img src="templates/avlite/assets/i/avlogosmall.gif"/></span>                          
                 <div class="hover-title show hide" style="display: none; z-index: 0; opacity: 1;">Gable</div>
             </a>
             
        </div>
             
-             <div id="individual-item-effects">
+        <div id="individual-item-effects">
         
-                   <div id="runaway-diagram-helipad" style="position:absolute;height:100%;height: 100%;position: absolute;width: 100%;display:none;">
+           <div id="runaway-diagram-helipad" style="position:absolute;height:100%;height: 100%;position: absolute;width: 100%;display:none;">
                 <div style="position: relative; left: 65.6%; width: 16.84%; opacity: 1; top: 57.3%;">
                     <img style="position:absolute; z-index: 96;width:100%;" src="templates/avlite/assets/i/helipad.gif" alt="">
                 </div>
                 <div style="  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.71);top: 0;height: 100%;position: absolute; width: 100%;z-index: 95;"></div>
            </div>
            
-                    <div id="runaway-diagram-av15-av60" style="position:absolute;height:100%;height: 100%;position: absolute;width: 100%;display:none;">
+            <div id="runaway-diagram-av15-av60" style="position:absolute;height:100%;height: 100%;position: absolute;width: 100%;display:none;">
                 <div style="position: relative; left: 35.7%; width: 04.66%; opacity: 1; top: 66.8%;">
                     <img style="position:absolute; z-index: 96;width:100%;" src="templates/avlite/assets/i/AV1560.gif" alt="">
                 </div>
@@ -120,7 +114,7 @@
                 </div>
                 <div style="  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.71);top: 0;height: 100%;position: absolute; width: 100%;z-index: 95;"></div>
            </div>
-       </div>
+      </div>
    </div>
 
 

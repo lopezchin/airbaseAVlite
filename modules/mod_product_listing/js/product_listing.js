@@ -1,9 +1,19 @@
-function scrollToAnchor(aid){
-    var aTag = $("a[name='"+ aid +"']");
-    $('html,body').animate({scrollTop: aTag.offset().top - 40},'slow');
-}
-
 $(function(){
+
+    $('#category_tab li a').click(function(){
+        
+        $('.single').css({'opacity':1});
+      
+    });
+
+    $('.hover-item-con').click(function(){
+
+        $('.single').css({'opacity':0.6});
+        $('#'+$(this).attr('data-id')).css({'opacity':1});
+        
+    });
+
+
     $("#image-category").hover(
                 function(){
                     $(this).find('.back-overlay').fadeIn().css({"z-index":5});  
@@ -53,120 +63,5 @@ $(function(){
             $($(this).attr('individual-effects')).stop().fadeOut("fast").css({"z-index":0});    
         }
     );
-
-    function showItem(a_items){
-        $(".iso-container-products .single").animate({ opacity: 0.4 });
-
-        for (var i = 0; i < a_items.length; i++) {
-            //$(a_items[i]).show();
-            $(a_items[i]).animate({ opacity: 100 });
-        };
-            showObstHeli();
-    }
-        
-    function showObstHeli()
-    {
-        var obhl_items =  [".obstr",".heli"];
-
-        for (var i = 0; i < obhl_items.length; i++) {
-        //$(a_items[i]).show();
-        $(obhl_items[i]).animate({ opacity: 100 });
-        };
-    }
-
-    $(".red-line").click(function(e){
-        var items =  [".AV-425-RF",".AV-70_AV-70-HI",".AV-72-RF"];
-
-        showItem(items);
-                scrollToAnchor("AV-425-RF");
-        e.preventDefault();
-    });
-    $(".blue-line").click(function(e){
-        var items =  [".AV-70_AV-70-HI",".AV-72-RF"];
-
-        showItem(items);
-                scrollToAnchor("AV-70_AV-70-HI");
-        e.preventDefault();
-    });
-    $(".item-av-solar-pals").click(function(e){
-        var items = [".AV-SOLAR-PALS"];
-
-        showItem(items);
-                scrollToAnchor("AV-SOLAR-PALS");
-        e.preventDefault();
-    });
-
-    /*$(".item-papi").click(function(e){
-        var items = [".product-papi"];
-
-        showItem(items);
-        e.preventDefault();
-    });*/
-
-    $(".item-windsock-cones").click(function(e){
-        var items = [".AV-WC-L-WindsockAssembly",".AV-09-4WL"];
-        showItem(items);
-                scrollToAnchor("AV-WC-L-WindsockAssembly");
-                e.preventDefault();
-    });
-
-
-    $(".item-cones").click(function(e){
-        var items = [".AV-MC_AV-LC_Cone-Markers"];
-        showItem(items);
-                scrollToAnchor("AV-MC_AV-LC_Cone-Markers");
-                e.preventDefault();
-    });
-
-    $(".item-gable").click(function(e){
-        var items = [".AV-GM_Gable"];
-        showItem(items);
-                scrollToAnchor("AV-GM_Gable");
-                e.preventDefault();
-    });
-
-    $(".item-arealight").click(function(e){
-        var items = [".product-arealight"];
-        showItem(items);e.preventDefault();
-    });
-
-
-    $(".item-av15-av60").click(function(e){
-        var items = [".AV-15",".AV-60"];
-        showItem(items);
-                scrollToAnchor("AV-15");
-                e.preventDefault();
-    });
-
-    $(".item-palc").click(function(e){
-        var items = [".AV-PALC"];
-        showItem(items);
-                scrollToAnchor("AV-PALC");
-                e.preventDefault();
-    });
-
-    $(".item-heliport-lighting").click(function(e){
-                
-        var items = [".single"];
-        showItem(items);
-    });
-        
-        $(".item-air-lights").click(function(e){
-        var items = [".single"];
-        showItem(items);     
-                
-    });
-        
-        $(".item-obstr-lights").click(function(e){
-        var items = [".single"];
-        showItem(items);
-                
-    });
-        
-        $(".item-heli-lights").click(function(e){
-                
-        var items = [".single"];
-        showItem(items);
-    });
 
 });

@@ -39,5 +39,7 @@
 		<position>avlite-airfield-module</position>
 		<position>avlite-obstruction-module</position>
 		<position>avlite-heliport-module</position>
+		<position>avlite-case-studies-module</position>
+		<position>avlite-project-gallery-module</position>
 	</positions>
 </extension>

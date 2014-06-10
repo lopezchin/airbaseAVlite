@@ -1,0 +1,34 @@
+<?xml version='1.0'?>
+<extension type='module' version='3.0' method='upgrade'>
+	<name>Location Distributor</name>
+	<author>Mark Diaz Philwebservices</author>
+	<version>1.0.0</version>
+	<description>This is for the location distributor</description>
+	<files>
+		<filename>mod_location_distributor.xml</filename>
+		<filename module='mod_location_distributor'>mod_location_distributor.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="catid"
+					type="category"
+					extension="com_content"
+					multiple="true"
+					default=""
+					size="10"
+					label="JCATEGORY"
+					description="MOD_ARTICLES_NEWS_FIELD_CATEGORY_DESC" >
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

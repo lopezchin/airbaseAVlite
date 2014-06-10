@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Avlite Case Studies Cateogry Module</name>
+    <author>Philwebservices</author>
+    <creationDate>06-06-2014</creationDate>
+	<copyright>Allright reserved 2014</copyright>
+    <authorEmail>philweb.srwebprogrammer@gmail.com</authorEmail>
+    <version>1.0.0</version>
+    <description>Avlite Case Studies Cateogry Module</description>
+    <files>
+        <filename>mod_case_studies_category.xml</filename>
+        <filename module="mod_case_studies_category">mod_case_studies_category.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+    </files>
+    <config>
+		<fields name="params">
+			<fieldset>
+				<field
+					name="parent"
+					type="category"
+					extension="com_content"
+					published=""
+					label="Avlite Case Studies Cateogry Module"
+					description="Avlite Case Studies Cateogry Module"/>
+			</fieldset>
+		</fields>
+    </config>
+</extension>

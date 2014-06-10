@@ -8,10 +8,23 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 <head>
 <jdoc:include type="head" />
 
+<?php JHTML::_('behavior.modal'); ?>
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<script type = "text/javascript" >
+  function redirect() {
+      var index = Math.floor((Math.random() * 8) + 1);
+      var link = ["http://www.youtube.com", "http://www.facebook.com", "http://www.twitter.com", "http://www.linkedin.com", 
+                "http://www.yahoo.com", "http://www.big.com", "http://www.solar.com", "http://www.sacasol.com"];
+      var selected_link = link[index];
+      window.location.href = selected_link;
+}
+
+</script>
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -36,7 +49,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
                     
-    
 <!-- jQuery -->
 <script src="<?php echo $this->baseurl ?>/templates/avlite/assets/js/ext/jquery-1.8.3.min.js"></script>
 <script src="<?php echo $this->baseurl ?>/templates/avlite/assets/js/libs/isotope.js"></script>
@@ -70,9 +82,14 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         avlite.Front.Menu();  
         avlite.Product.init();
         avlite.Zoom.init();
-        avlite.Lightbox.init(); 
+        avlite.Lightbox.init();
     });
 </script>
+
+<script type="text/javascript">
+window.top.setTimeout('window.parent.document.getElementById(\'sbox-window\').close()',</b> <b class="green">3500</b><b>);
+</script>
+
 
 </head>
     <body>
@@ -101,9 +118,10 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                     <!--jdocs for main-menu-->  
                       <jdoc:include type="modules" name="main-menu" />
                     <!--jdocs for main-menu--> 
-                    
+
                     <div class="login enquirehdr">
-                        <a href="#" class="button button--red login__button button-small lightbox-form-login" type="submit" value=""><i class="icon-email"></i>Enquire</a>                    
+                        <a class="modal button button--red login__button button-small lightbox-form-login" href="index.php?option=com_rsform&formId=14&tmpl=component" rel="{handler: 'iframe', size: {x: 660, y: 475}}"><i class="icon-email"></i>Enquire</a> 
+                        <!-- <a href="#" class="button button--red login__button button-small lightbox-form-login" type="submit" value=""><i class="icon-email"></i>Enquire</a>                     -->
                     </div>
                 </nav>
             </div>
@@ -122,27 +140,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
   
         <?php $app = JFactory::getApplication();
               $menuID = $app->getMenu()->getActive()->id ;
-                  if ($menuID == '138'){ ?>
-        
-        <div id="proj_gallery" class="section section--main">
-            <div id="gallery-img" class="iso-container-products imageRow">
-                <div class="set">
-
-                <section class="t-content">
-                    <jdoc:include type="modules" name="form-field" style="none"/> 
-                    <jdoc:include type="component" />
-                    <jdoc:include type="message" />
-                </section>
-                
-                </div>
-            </div>  
-        </div>
-        
-        <?php }elseif($menuID == '106'){ ?>
-
-            <?php include('assets/include/location-distributor.php') ?>   
-        
-        <?php }elseif($menuID == '144'){ ?>
+        if($menuID == '144'){ ?>
             
          <div class="section section--main">
             <section class="t-content">
@@ -151,13 +149,10 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
             </section>
         </div>  
 
-
         <?php }else { ?>
-
 
         <div class="section section--main">
             
-
             <div class="t-content t-content-no-border">
 
                      <?php if ($menuID == '141'){ ?> <!-- for subscribe page form only -->
@@ -177,18 +172,40 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
                     <?php }else{ ?>
 
-                    <jdoc:include type="component" />
-                    <jdoc:include type="message" />
+                        <jdoc:include type="component" />
+                        <jdoc:include type="message" />
 
-                    <?php if ($this->countModules('form-field')) : ?>
-                        <jdoc:include type="modules" name="form-field" style="none"/> 
+                        <?php if ($this->countModules('form-field')) : ?>
+                            <jdoc:include type="modules" name="form-field" style="none"/> 
+                        <?php endif; ?>
+
+                        <?php if ($this->countModules('product-listing')) : ?>
+                            <jdoc:include type="modules" name="product-listing" />
+                        <?php endif; ?>
+
+                        <?php if ($this->countModules('map-lighbox')) : ?>
+                            <jdoc:include type="modules" name="map-lighbox" />
+                        <?php endif; ?>
+
+                    <?php } ?> 
+                        
+                     <jdoc:include type="modules" name="avlite-case-studies-module" style="none"/>  <?php //catid = 20 ?> 
+
+
+                    <?php if($this->countModules('avlite-project-gallery-module')): ?>
+                        <div id="proj_gallery" class="section section--main">
+                            <div id="gallery-img" class="iso-container-products imageRow">
+                                <div class="set">
+
+                                    <jdoc:include type="modules" name="avlite-project-gallery-module" style="none"/>  <?php //catid = 21 ?>  
+
+                                </div>
+                            </div>  
+                        </div>
                     <?php endif; ?>
 
-                    <?php if ($this->countModules('product-listing')) : ?>
-                        <jdoc:include type="modules" name="product-listing" />
-                    <?php endif; ?>
 
-                    <?php } ?>                   
+
 
             </div>
 
@@ -206,7 +223,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                 <jdoc:include type="modules" name="avlite-obstruction-module" style="none" />
                 <jdoc:include type="modules" name="avlite-heliport-module" style="none" />
             </section>     
-
             
             <jdoc:include type="modules" name="avlite-accessories-module" style="none" />
          
@@ -228,7 +244,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                 
                 <?php 
                     //getting email input
-                    JRequest::get( 'post' )
+                    JRequest::get( 'post' );
                 ?>
 
                 <form class="subscribe__form" action="/avlite/contact/subscribe" method="POST">
@@ -247,6 +263,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                 © 2013 All rights reserved.
             </p>
         </footer> 
+
 
 <!-- footer end -->       
  

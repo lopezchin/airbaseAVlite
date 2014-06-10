@@ -23,7 +23,7 @@ foreach ( $results as $result  ) { ?>
         <?php // var_dump(json_decode($result->images)->image_fulltext) ?>
         <?php if($state == '1'){ ?>
             <!-- <?php echo 'menu'.$result->id; ?> -->
-            <div class="single <?php echo $result->title; ?>">
+            <div id="<?php echo $result->id; ?>" class="single <?php echo $result->title; ?>">
             <div class="title" style="height:66px!important;font-size:0.775rem;">
              <a href="product/<?php echo $result->id; ?>-<?php echo $result->alias;?>" class="menu__subitem"><?php echo $result->title; ?></a>
             </div>
